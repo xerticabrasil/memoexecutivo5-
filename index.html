@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memo Executivo: Os 5% da IA no Ministério Público | Xertica.ai</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            celeste: '#239EA6',   /* Teal from image */
+                            magenta: '#C751A3',   /* Pink from image */
+                            violeta: '#5E4694',   /* Purple intersection from image */
+                            marron: '#1A1715',    /* Dark background from image */
+                            light: '#FFFEF8'      /* Off-white for text readability */
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['"Helvetica Neue"', 'Helvetica', 'Arial', 'sans-serif'],
+                    },
+                    letterSpacing: {
+                        'swiss': '-0.02em',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            background-color: #1A1715;
+            color: #FFFEF8;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Brutalist / Analog Input Style */
+        .custom-input {
+            background: #1A1715;
+            border: 2px solid #FFFEF8; 
+            color: #FFFEF8;
+            transition: all 0.2s ease;
+            border-radius: 0; 
+        }
+
+        .custom-input::placeholder {
+            color: rgba(255, 254, 248, 0.5);
+        }
+
+        .custom-input:focus {
+            border-color: #C751A3; 
+            outline: none;
+            box-shadow: 4px 4px 0px 0px #C751A3;
+        }
+
+        /* Message Box Styles */
+        .message-box-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(26, 23, 21, 0.95);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        
+        .message-box-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .message-box {
+            background: #1A1715;
+            border: 4px solid #FFFEF8;
+            padding: 3rem;
+            text-align: center;
+            max-width: 90%;
+            width: 450px;
+            transform: translateY(-20px);
+            transition: transform 0.3s ease;
+            box-shadow: 16px 16px 0px 0px #239EA6;
+        }
+        
+        .message-box-overlay.active .message-box {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col font-sans">
+
+    <nav class="w-full py-6 absolute top-0 z-50 border-b-2 border-brand-light/20 bg-brand-marron/90 backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 flex items-center">
+            <!-- Ícone Xertica -->
+            <img src="https://i.imgur.com/cVseTqH.jpeg" alt="Xertica.ai" class="h-10 md:h-12" onerror="this.src='https://placehold.co/100x100/1A1715/239EA6?text=X'">
+        </div>
+    </nav>
+
+    <main class="flex-grow pt-24 md:pt-0">
+        <div class="w-full flex flex-col lg:flex-row min-h-screen items-stretch">
+            
+            <!-- Content Column (Left) -->
+            <div class="w-full lg:w-1/2 flex flex-col justify-center px-6 py-12 md:px-12 lg:pl-[max(3rem,calc((100vw-80rem)/2))] lg:pr-12 bg-brand-marron z-10">
+                
+                <div class="space-y-8 max-w-2xl mt-12 lg:mt-0">
+                    <!-- Eyebrow: Solid Violeta -->
+                    <div class="inline-block px-4 py-1.5 bg-brand-violeta text-brand-light border-2 border-brand-light shadow-[4px_4px_0px_0px_#FFFEF8]">
+                        <span class="text-[13px] font-bold uppercase tracking-swiss font-display">Memo Executivo</span>
+                    </div>
+
+                    <!-- H1 Title -->
+                    <h1 class="text-[48px] md:text-[64px] font-bold text-brand-light leading-[1.1] tracking-swiss font-display">
+                        Os 5%: O que separa o sucesso da falha em IA.
+                    </h1>
+
+                    <!-- Body Text -->
+                    <p class="text-[18px] text-brand-light/90 font-normal leading-[1.5] font-sans">
+                        O MIT revelou que <strong>95% das iniciativas de IA generativa</strong> não produzem impacto mensurável. Descubra como a <strong>Engenharia de Contexto</strong> coloca o Ministério Público nos 5% que capturam valor real.
+                    </p>
+                    
+                    <div class="grid grid-cols-1 gap-8 pt-6">
+                        <!-- Card 1: Celeste -->
+                        <div class="flex items-start gap-5">
+                            <div class="w-12 h-12 shrink-0 bg-brand-celeste border-2 border-brand-light shadow-[4px_4px_0px_0px_#FFFEF8] flex items-center justify-center">
+                                <span class="text-brand-light font-display font-bold text-[20px]">01</span>
+                            </div>
+                            <div>
+                                <h4 class="text-[22px] font-bold text-brand-light tracking-swiss font-display leading-[1.2] mb-1">Dor única e definida</h4>
+                                <p class="text-[18px] text-brand-light/80 font-sans leading-[1.4]">Abandone a "IA genérica". Os projetos de sucesso atacam gargalos específicos, como a priorização processual e o risco de prescrição de acervos.</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 2: Violeta -->
+                        <div class="flex items-start gap-5">
+                            <div class="w-12 h-12 shrink-0 bg-brand-violeta border-2 border-brand-light shadow-[4px_4px_0px_0px_#FFFEF8] flex items-center justify-center">
+                                <span class="text-brand-light font-display font-bold text-[20px]">02</span>
+                            </div>
+                            <div>
+                                <h4 class="text-[22px] font-bold text-brand-light tracking-swiss font-display leading-[1.2] mb-1">Engenharia de Contexto</h4>
+                                <p class="text-[18px] text-brand-light/80 font-sans leading-[1.4]">Estruture dados e fluxos para a IA entender a intenção da instituição. Reduza alucinações e torne cada decisão plenamente auditável.</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 3: Magenta -->
+                        <div class="flex items-start gap-5">
+                            <div class="w-12 h-12 shrink-0 bg-brand-magenta border-2 border-brand-light shadow-[4px_4px_0px_0px_#FFFEF8] flex items-center justify-center">
+                                <span class="text-brand-light font-display font-bold text-[20px]">03</span>
+                            </div>
+                            <div>
+                                <h4 class="text-[22px] font-bold text-brand-light tracking-swiss font-display leading-[1.2] mb-1">O Humano no Comando</h4>
+                                <p class="text-[18px] text-brand-light/80 font-sans leading-[1.4]">A IA cruza terabytes de autos, prepara e prioriza; o membro decide. Uma arquitetura "Glass Box" em conformidade com LGPD e resoluções do CNJ/CNMP.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full lg:w-1/2 relative min-h-[700px] flex items-center justify-center p-6 md:p-12 border-t-2 lg:border-t-0 lg:border-l-2 border-brand-light/20 overflow-hidden bg-brand-marron">
+                
+                <!-- Geometric Overlapping Squares Background (Matches the provided image perfectly) -->
+                <div class="absolute inset-0 z-0 flex items-center justify-center overflow-hidden opacity-80 lg:opacity-100">
+                    <div class="relative w-[300px] h-[300px] sm:w-[450px] sm:h-[450px] rotate-[-5deg] scale-110">
+                        <!-- Top Left Square (Celeste) -->
+                        <div class="absolute top-0 left-0 w-[60%] h-[60%] bg-brand-celeste"></div>
+                        <!-- Bottom Right Square (Magenta) -->
+                        <div class="absolute bottom-0 right-0 w-[60%] h-[60%] bg-brand-magenta"></div>
+                        <!-- Intersection Square (Violeta) -->
+                        <div class="absolute top-[40%] left-[40%] w-[20%] h-[20%] bg-brand-violeta"></div>
+                    </div>
+                </div>
+                
+                <!-- Solid Form Box -->
+                <div class="relative z-10 w-full max-w-md bg-[#1A1715] border-4 border-brand-light p-8 sm:p-10 shadow-[16px_16px_0px_0px_#239EA6]">
+                    <!-- Form Title -->
+                    <h3 class="text-[32px] font-bold text-[#FFFEF8] mb-2 tracking-swiss font-display leading-[1.2]">Baixe o Memo Executivo</h3>
+                    <p class="text-[18px] text-[#FFFEF8]/90 mb-8 font-sans leading-[1.4]">Preencha os dados abaixo para receber o material completo em seu e-mail.</p>
+
+                    <form action="https://docs.google.com/forms/d/e/1FAIpQLSc5x-2ppXSwOIf-uxRkIGnPaY63h7HLlPVwAtER-IpBNDiXRg/formResponse" method="POST" target="hidden_iframe" onsubmit="handleFormSubmit(event);" class="space-y-5">
+                        <div>
+                            <label class="block text-[14px] font-bold text-[#FFFEF8] mb-2 font-sans">Nome completo <span class="text-[#C751A3]">*</span></label>
+                            <input type="text" name="entry.2145126367" placeholder="Seu nome" class="custom-input w-full px-4 py-3 text-[18px]" required>
+                        </div>
+                        <div>
+                            <label class="block text-[14px] font-bold text-[#FFFEF8] mb-2 font-sans">E-mail corporativo <span class="text-[#C751A3]">*</span></label>
+                            <input type="email" name="entry.981922432" placeholder="nome@empresa.com" class="custom-input w-full px-4 py-3 text-[18px]" required>
+                        </div>
+                        <div>
+                            <label class="block text-[14px] font-bold text-[#FFFEF8] mb-2 font-sans">Telefone <span class="text-[#C751A3]">*</span></label>
+                            <input type="tel" name="entry.1425669326" placeholder="(00) 00000-0000" class="custom-input w-full px-4 py-3 text-[18px]" required>
+                        </div>
+                        
+                        <!-- Form Button -->
+                        <button type="submit" class="w-full mt-6 py-4 bg-[#239EA6] text-[#1A1715] font-bold text-[18px] font-display tracking-swiss hover:bg-[#C751A3] hover:text-[#FFFEF8] border-2 border-brand-light transition-colors duration-200 shadow-[4px_4px_0px_0px_#FFFEF8]">
+                            Baixar material
+                        </button>
+                    </form>
+                    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(typeof submitted != 'undefined' && submitted) { showSuccessMessage(); }"></iframe>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-brand-marron border-t-2 border-brand-light/20 py-8 text-center mt-auto relative z-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <img src="https://i.imgur.com/cVseTqH.jpeg" alt="Xertica.ai" class="h-8 mx-auto mb-4 opacity-80" onerror="this.src='https://placehold.co/100x100/1A1715/239EA6?text=X'">
+            <p class="text-brand-light/60 text-[14px] font-sans">
+                © 2026 Xertica.ai. Todos os direitos reservados.
+            </p>
+        </div>
+    </footer>
+
+    <div id="successMessage" class="message-box-overlay">
+        <div class="message-box relative">
+            <div class="w-16 h-16 bg-[#50EBEC] border-4 border-[#FFFEF8] rounded-full mx-auto flex items-center justify-center mb-6 shadow-[4px_4px_0px_0px_#FF00FF]">
+                <svg class="w-8 h-8 text-[#2A2415]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="square" stroke-linejoin="miter" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+            </div>
+            <h3 class="text-[32px] font-bold text-[#FFFEF8] mb-4 font-display tracking-swiss leading-tight">Sucesso!</h3>
+            <p class="text-[18px] text-[#FFFEF8]/90 mb-8 font-sans">O material foi aberto em uma nova guia. Se preferir, clique no botão abaixo para acessá-lo.</p>
+            <a href="https://drive.google.com/file/d/1fBmVVCm1yG5kDUPb7n6Azi_2dBkbfFs_/view?usp=sharing" target="_blank" class="w-full inline-block py-4 mb-4 bg-[#FF00FF] text-[#FFFEF8] font-bold text-[18px] font-display hover:bg-[#50EBEC] hover:text-[#2A2415] border-2 border-[#FFFEF8] transition-colors shadow-[4px_4px_0px_0px_#FFFEF8]">
+                Acessar Memo
+            </a>
+            <button onclick="closeSuccessMessage()" class="w-full py-4 bg-transparent text-[#FFFEF8] font-bold text-[18px] font-display hover:bg-[#FFFEF8]/10 border-2 border-[#FFFEF8] transition-colors">
+                Fechar
+            </button>
+        </div>
+    </div>
+
+    <script>
+        var submitted = false;
+        
+        function handleFormSubmit(event) {
+            submitted = true;
+            // Abre o PDF no Google Drive em uma nova guia imediatamente após o clique
+            window.open('https://drive.google.com/file/d/1fBmVVCm1yG5kDUPb7n6Azi_2dBkbfFs_/view?usp=sharing', '_blank');
+        }
+
+        function showSuccessMessage() {
+            const messageBox = document.getElementById('successMessage');
+            messageBox.classList.add('active');
+        }
+
+        function closeSuccessMessage() {
+            const messageBox = document.getElementById('successMessage');
+            messageBox.classList.remove('active');
+            
+            const form = document.querySelector('form');
+            if(form) form.reset();
+            submitted = false;
+        }
+    </script>
+</body>
+</html>
